@@ -532,6 +532,7 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   z-index: 1;
 }
 
@@ -581,13 +582,29 @@ section,
   color: var(--accent-color);
 }
 
+/* Mobile responsive adjustments for hero image */
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .hero img {
+    object-fit: contain;
+    object-position: center center;
+  }
+  
   .hero h2 {
     font-size: 32px;
   }
 
   .hero p {
     font-size: 20px;
+  }
+}
+
+/* For very small screens, adjust further */
+@media (max-width: 480px) {
+  .hero img {
+    object-position: center 20%;
   }
 }
 
